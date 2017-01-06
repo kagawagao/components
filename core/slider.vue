@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import drag from 'directives/drag'
+
 const classes = {
   prev: 'c-slider-prev',
   active: 'c-slider-active',
