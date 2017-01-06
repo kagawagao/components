@@ -15,7 +15,7 @@
 import CTextfield from './textfield'
 import CIcon from './icon'
 import mField from './mixins/field'
-import tap from '../directives/tap'
+import tap from 'directives/tap'
 
 export default {
   mixins: [mField],

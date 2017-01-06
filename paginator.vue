@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import tap from './directives/tap'
+import tap from 'directives/tap'
 
 export default {
   props: {

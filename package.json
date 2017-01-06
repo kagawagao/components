@@ -20,6 +20,9 @@
     "url": "https://github.com/crossjs/components/issues"
   },
   "homepage": "https://github.com/crossjs/components",
+  "dependencies": {
+    "directives": "crossjs/directives"
+  },
   "devDependencies": {
     "eslint": "3.9.0",
     "eslint-config-plato": "^0.0.3"

@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import tap from '../directives/tap'
-import drag from '../directives/drag'
+import tap from 'directives/tap'
+import drag from 'directives/drag'
 
 export default {
   props: {

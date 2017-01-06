@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import drag from '../directives/drag'
+import drag from 'directives/drag'
 
 export default {
   props: {

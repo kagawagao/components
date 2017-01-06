@@ -21,7 +21,7 @@
 import CRow from './row'
 import CCol from './col'
 import CLink from './link'
-import tap from '../directives/tap'
+import tap from 'directives/tap'
 
 export default {
   props: {

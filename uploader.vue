@@ -18,8 +18,8 @@
 </template>
 
 <script>
+import tap from 'directives/tap'
 import CIcon from './core/icon'
-import tap from './directives/tap'
 
 let i = 0
 

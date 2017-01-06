@@ -9,7 +9,7 @@
 
 <script>
 import mField from './mixins/field'
-import tap from '../directives/tap'
+import tap from 'directives/tap'
 
 export default {
   mixins: [mField],
