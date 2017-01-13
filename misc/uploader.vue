@@ -19,7 +19,7 @@
 
 <script>
 import tap from 'directives/tap'
-import CIcon from './core/icon'
+import CIcon from '../core/icon'
 
 let i = 0
 
