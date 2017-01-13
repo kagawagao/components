@@ -51,7 +51,8 @@ const karmaConfig = {
       modules: ['.', 'node_modules'],
       extensions: ['.css', '.js', '.json', '.vue'],
       alias: {
-        vue: 'vue/dist/vue'
+        vue: 'vue/dist/vue',
+        directives: 'plato-directives'
       }
     },
     plugins: [
@@ -110,16 +111,6 @@ const karmaConfig = {
     module: {
       rules: [
         {
-          test: /\.(js|vue)$/,
-          exclude: /node_modules/,
-          loader: 'eslint-loader',
-          options: {
-            emitWarning: true,
-            formatter: require('eslint-friendly-formatter')
-          },
-          enforce: 'pre'
-        },
-        {
           test: /\.vue$/,
           loader: 'vue-loader',
           options: {
@@ -131,13 +122,7 @@ const karmaConfig = {
         },
         {
           test: /\.js$/,
-          exclude: /node_modules/,
-          loader: 'babel-loader'
-        },
-        {
-          test: /\.js$/,
-          // util、components、directives 模块需要 babel 处理
-          include: process.platform === 'win32' ? /node_modules\\directives\\/ : /node_modules\/directives\//,
+          exclude: /node_modules[/\\](?!plato-)/,
           loader: 'babel-loader'
         },
         {
@@ -145,18 +130,7 @@ const karmaConfig = {
           loader: 'json-loader'
         },
         {
-          test: /\.html$/,
-          loader: 'vue-html-loader'
-        },
-        {
-          test: /@[1-3]x\S*\.(png|jpg|gif)(\?.*)?$/,
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]?[hash:7]'
-          }
-        },
-        {
-          test: /\.(png|jpg|gif|svg|woff2?|eot|ttf)(\?.*)?$/,
+          test: /\.(svg|woff2?|eot|ttf)(\?.*)?$/,
           exclude: /@[1-3]x/, // skip encoding @1x/@2x/@3x images with base64
           loader: 'url-loader',
           options: {
