@@ -4,6 +4,7 @@
     :value="value"
     :checked="_checked"
     v-tap.prevent
+    @touchend=""
     @tap="onChange">
 </template>
 
