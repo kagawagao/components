@@ -3,8 +3,8 @@
     type="checkbox"
     :value="value"
     :checked="_checked"
-    v-tap.prevent
-    @touchend=""
+    v-tap
+    @touchend.prevent=""
     @tap="onChange">
 </template>
 
