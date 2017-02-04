@@ -77,6 +77,7 @@ export default {
     if (this.itemLength) {
       this.itemHeight = children[0].clientHeight
       this.calcOffset()
+      this.$forceUpdate()
     }
   },
 
@@ -91,6 +92,9 @@ export default {
         this.itemHeight = 0
         this.offset = 0
       }
+      this.$nextTick(() => {
+        this.$forceUpdate()
+      })
     }
   },
 

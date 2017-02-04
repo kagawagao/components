@@ -55,16 +55,16 @@ describe('picker.vue', () => {
 
     expect(vm.$el.style.height).to.equal('0px')
     vm.ok = true
-    vm.$nextTick(() => {
+    setTimeout(() => {
       expect(vm.$el.style.height).to.equal('700px')
       expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 300px, 0)')
       vm.ok = false
-      vm.$nextTick(() => {
+      setTimeout(() => {
         expect(vm.$el.style.height).to.equal('0px')
         expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 0px, 0)')
         done()
-      })
-    })
+      }, 50)
+    }, 50)
   })
 
   it('size', done => {

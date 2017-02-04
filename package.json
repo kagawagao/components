@@ -1,6 +1,6 @@
 {
   "name": "plato-components",
-  "version": "3.0.0-beta.5",
+  "version": "3.0.0-beta.6",
   "description": "Components for PLATO",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "unit:dev": "npm run unit -- --watch",
     "lint": "eslint --max-warnings 10 .",
     "lint:fix": "npm run lint -- --fix",
-    "lint:css": "stylelint core/**/*.css misc/**/*.css",
+    "lint:css": "stylelint {core,misc}/**/*.css",
     "test": "npm run lint && npm run lint:css && npm run unit"
   },
   "repository": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/crossjs/components",
   "dependencies": {
-    "plato-directives": "^3.0.0-beta.4"
+    "plato-directives": "^3.0.0-beta.5"
   },
   "devDependencies": {
     "babel-loader": "^6.2.10",
