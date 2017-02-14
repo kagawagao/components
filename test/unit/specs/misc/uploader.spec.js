@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import CUploader from 'misc/uploader'
-import tap from 'directives/tap'
+import tap from 'platojs/directives/tap'
 
 Vue.directive('tap', tap)
 

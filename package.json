@@ -1,6 +1,6 @@
 {
   "name": "plato-components",
-  "version": "3.0.0-beta.7",
+  "version": "3.0.0-beta.8",
   "description": "Components for PLATO",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/crossjs/components",
   "dependencies": {
-    "plato-directives": "^3.0.0-beta.5"
+    "platojs": "*"
   },
   "devDependencies": {
     "babel-loader": "^6.2.10",

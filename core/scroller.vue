@@ -41,7 +41,7 @@
 <script>
 import CIcon from './icon'
 import CSpinner from './spinner'
-import drag from 'directives/drag'
+import drag from 'platojs/directives/drag'
 
 const STATE_IDLE = 0
 const STATE_DOWN_GO = 2

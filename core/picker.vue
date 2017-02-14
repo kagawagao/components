@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import drag from 'directives/drag'
+import drag from 'platojs/directives/drag'
 
 export default {
   props: {

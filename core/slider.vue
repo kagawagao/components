@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import drag from 'directives/drag'
+import drag from 'platojs/directives/drag'
 
 const classes = {
   prev: 'c-slider-prev',

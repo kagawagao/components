@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import tap from 'directives/tap'
+import tap from 'platojs/directives/tap'
 import CIcon from '../core/icon'
 
 let i = 0

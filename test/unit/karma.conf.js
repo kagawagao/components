@@ -122,7 +122,7 @@ const karmaConfig = {
         },
         {
           test: /\.js$/,
-          exclude: /node_modules[/\\](?!plato-)/,
+          exclude: /node_modules[/\\](?!platojs)/,
           loader: 'babel-loader'
         },
         {
