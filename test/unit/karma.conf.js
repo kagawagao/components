@@ -51,8 +51,7 @@ const karmaConfig = {
       modules: ['.', 'node_modules'],
       extensions: ['.css', '.js', '.json', '.vue'],
       alias: {
-        vue: 'vue/dist/vue',
-        directives: 'plato-directives'
+        vue: 'vue/dist/vue'
       }
     },
     plugins: [
