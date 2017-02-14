@@ -1,11 +1,11 @@
-# UI Components for [PLATO](https://github.com/crossjs/plato)
+# UI Components for [PLATO](https://github.com/platojs/plato)
 
 > 小而美，少即多。
 
-[![Travis](https://img.shields.io/travis/crossjs/components.svg?style=flat-square)](https://travis-ci.org/crossjs/components)
-[![Coveralls](https://img.shields.io/coveralls/crossjs/components.svg?style=flat-square)](https://coveralls.io/github/crossjs/components)
-[![dependencies](https://david-dm.org/crossjs/components.svg?style=flat-square)](https://david-dm.org/crossjs/components)
-[![devDependency Status](https://david-dm.org/crossjs/components/dev-status.svg?style=flat-square)](https://david-dm.org/crossjs/components?type=dev)
+[![Travis](https://img.shields.io/travis/platojs/components.svg?style=flat-square)](https://travis-ci.org/platojs/components)
+[![Coveralls](https://img.shields.io/coveralls/platojs/components.svg?style=flat-square)](https://coveralls.io/github/platojs/components)
+[![dependencies](https://david-dm.org/platojs/components.svg?style=flat-square)](https://david-dm.org/platojs/components)
+[![devDependency Status](https://david-dm.org/platojs/components/dev-status.svg?style=flat-square)](https://david-dm.org/platojs/components?type=dev)
 [![NPM version](https://img.shields.io/npm/v/plato-components.svg?style=flat-square)](https://npmjs.org/package/plato-components)
 
 ## 设计

@@ -1,5 +1,5 @@
 {
-  "name": "plato-components",
+  "name": "components",
   "version": "3.0.0-beta.8",
   "description": "Components for PLATO",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crossjs/components.git"
+    "url": "git+https://github.com/platojs/components.git"
   },
   "keywords": [
     "plato",
@@ -23,9 +23,9 @@
   "author": "crossjs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/crossjs/components/issues"
+    "url": "https://github.com/platojs/components/issues"
   },
-  "homepage": "https://github.com/crossjs/components",
+  "homepage": "https://github.com/platojs/components",
   "dependencies": {
     "platojs": "*"
   },
