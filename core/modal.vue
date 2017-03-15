@@ -6,7 +6,7 @@
         <div class="c-modal-content" v-show="show">
           <div class="c-modal-body"><slot></slot></div>
           <c-row class="c-modal-actions" v-if="_actions">
-            <c-col class="c-modal-action" v-for="(action, key) in _actions">
+            <c-col class="c-modal-action" v-for="(action, key) in _actions" :key="key">
               <c-link class="c-modal-link" :class="action.class"
                 v-tap @tap.native="$emit(key)">{{action.label}}</c-link>
             </c-col>
