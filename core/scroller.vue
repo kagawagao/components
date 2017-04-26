@@ -4,7 +4,8 @@
     v-drag.vertical
     @dragstart="dragstart"
     @drag="drag"
-    @dragend="dragend">
+    @dragend="dragend"
+    @scroll="scroll">
     <div class="c-scroller-container"
       :style="{height: Math.max(maxHeight, height) + 1 + 'px'}">
       <div class="c-scroller-content"
@@ -27,10 +28,12 @@
           <slot name="pullup"
             :upGo="upGo"
             :upReady="upReady"
-            :upAwaiting="upAwaiting">
+            :upAwaiting="upAwaiting"
+            :drained="drained">
             <c-icon v-if="upReady" class="up-ready">arrow-small-down</c-icon>
             <c-icon v-else-if="upGo" class="up-go">arrow-small-up</c-icon>
             <c-spinner v-else-if="upAwaiting"></c-spinner>
+            <span v-else="drained">No more.</span>
           </slot>
         </div>
       </div>
@@ -42,6 +45,7 @@
 import CIcon from './icon'
 import CSpinner from './spinner'
 import drag from 'platojs/directives/drag'
+import debounce from 'lodash/debounce'
 
 const STATE_IDLE = 0
 const STATE_DOWN_GO = 2
@@ -56,10 +60,6 @@ export default {
     height: {
       type: Number,
       default: 0
-    },
-    bounce: {
-      type: Number,
-      default: 1.25
     },
     loading: {
       type: Boolean,
@@ -131,11 +131,15 @@ export default {
     }
   },
 
+  created () {
+    this.scroll = debounce(this.scroll.bind(this), 50)
+  },
+
   mounted () {
     // 溢出距离
     this.maxScroll = 0
     // 临界阈值
-    this.threshold = this.$refs.indicator.clientHeight * this.bounce
+    this.threshold = this.$refs.indicator.clientHeight
     this.fill()
   },
 
@@ -171,32 +175,54 @@ export default {
       if (this.infinite && this.pullState === STATE_UP_AWAITING) {
         return
       }
-      const _distance = e.touches[0].pageY - this.startY
-      const isDown = _distance > 0 && this.$el.scrollTop === 0
-      const isUp = _distance < 0 && this.$el.scrollTop >= this.maxScroll
-      if (!isDown && !isUp) {
-        return
+
+      const distance = e.touches[0].pageY - this.startY
+      const scrollTop = this.$el.scrollTop
+
+      if (distance > 0 && scrollTop === 0) {
+        e.preventDefault()
+        e.stopPropagation()
+        this.dragdown(distance)
+      } else {
+        const scrollOffset = scrollTop - (this.maxScroll - this.threshold)
+
+        if (scrollOffset >= 0) {
+          if (distance < 0 && scrollOffset >= this.threshold) {
+            e.preventDefault()
+            e.stopPropagation()
+          }
+
+          this.dragup(scrollOffset)
+        }
       }
-      e.preventDefault()
-      e.stopPropagation()
-      const distance = Math.min(this.threshold, _distance)
-      this.offset = this.maxScroll
-        ? Math.max(this.drained ? 0 : -this.threshold, distance)
-        : isDown ? distance : 0
-      if (this.pullState < STATE_DOWN_AWAITING &&
-          this.pullState > STATE_UP_AWAITING) {
-        if (this.offset > 0) {
-          // pulldown
-          this.pullState = this.offset > this.threshold / this.bounce ? STATE_DOWN_GO : STATE_DOWN_READY
-        } else if (this.offset < 0) {
-          // pullup
-          if (!this.drained) {
-            if (this.maxScroll) {
-              this.pullState = -this.offset > this.threshold / this.bounce ? STATE_UP_GO : STATE_UP_READY
-            }
-            if (this.infinite && this.pullState === STATE_UP_READY) {
-              this.pullup()
-            }
+    },
+    scroll (e) {
+      const scrollOffset = this.$el.scrollTop - (this.maxScroll - this.threshold)
+
+      if (scrollOffset >= 0) {
+        if (scrollOffset >= this.threshold) {
+          e.preventDefault()
+          e.stopPropagation()
+        }
+
+        this.dragup(scrollOffset, true)
+      }
+    },
+    dragdown (distance) {
+      this.offset = Math.min(this.threshold, distance)
+      if (this.pullState < STATE_DOWN_AWAITING) {
+        this.pullState = this.offset >= this.threshold ? STATE_DOWN_GO : STATE_DOWN_READY
+      }
+    },
+    dragup (scrollOffset, fromScroll) {
+      this.offset = 0
+      if (this.pullState > STATE_UP_AWAITING) {
+        if (!this.drained) {
+          if (this.maxScroll) {
+            this.pullState = scrollOffset >= this.threshold && !fromScroll ? STATE_UP_GO : STATE_UP_READY
+          }
+          if (this.infinite && this.pullState === STATE_UP_READY) {
+            this.pullup()
           }
         }
       }
@@ -207,19 +233,22 @@ export default {
           return
         }
       }
+
       if (this.pullState === STATE_UP_GO) {
         this.pullup()
         return
       }
+
       if (this.pullState === STATE_DOWN_GO) {
         this.pulldown()
         return
       }
+
       this.reset()
     },
     pulldown () {
       this.pullState = STATE_DOWN_AWAITING
-      this.offset = this.threshold / this.bounce
+      this.offset = this.threshold
       this.$emit('pulldown')
       this.$nextTick(() => {
         // 如果外部未处理 pulldown，则重置
@@ -230,7 +259,7 @@ export default {
     },
     pullup () {
       this.pullState = STATE_UP_AWAITING
-      this.offset = this.maxScroll ? -this.threshold / this.bounce : 0
+      this.offset = 0
       this.$emit('pullup')
       this.$nextTick(() => {
         // 如果外部未处理 pullup，则重置

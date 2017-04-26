@@ -14,19 +14,15 @@
   }
 
   &-indicator {
-    position: absolute;
-    width: 100%;
     height: dpr(80px);
     padding: dpr(16px);
     box-sizing: border-box;
     text-align: center;
 
     &-down {
+      position: absolute;
       top: -dpr(80px);
-    }
-
-    &-up {
-      bottom: -dpr(80px);
+      width: 100%;
     }
 
     & .c-icon {
