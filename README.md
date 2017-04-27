@@ -4,9 +4,6 @@
 
 [![Travis](https://img.shields.io/travis/platojs/components.svg?style=flat-square)](https://travis-ci.org/platojs/components)
 [![Coveralls](https://img.shields.io/coveralls/platojs/components.svg?style=flat-square)](https://coveralls.io/github/platojs/components)
-[![dependencies](https://david-dm.org/platojs/components.svg?style=flat-square)](https://david-dm.org/platojs/components)
-[![devDependency Status](https://david-dm.org/platojs/components/dev-status.svg?style=flat-square)](https://david-dm.org/platojs/components?type=dev)
-[![NPM version](https://img.shields.io/npm/v/plato-components.svg?style=flat-square)](https://npmjs.org/package/plato-components)
 
 ## Principles
 
