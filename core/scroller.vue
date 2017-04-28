@@ -143,6 +143,14 @@ export default {
     this.fill()
   },
 
+  updated () {
+    const clientHeight = this.$refs.content && this.$refs.content.clientHeight || 0
+    if (this.maxHeight !== clientHeight) {
+      this.maxHeight = clientHeight
+      this.maxScroll = Math.max(0, this.maxHeight - this.height)
+    }
+  },
+
   methods: {
     // reset postion
     reset () {
@@ -197,6 +205,7 @@ export default {
       }
     },
     scroll (e) {
+      this.pullState = STATE_IDLE
       const scrollOffset = this.$el.scrollTop - (this.maxScroll - this.threshold)
 
       if (scrollOffset >= 0) {
