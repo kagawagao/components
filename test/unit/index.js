@@ -13,6 +13,7 @@ global.assert = chai.assert
 global.expect = chai.expect
 
 // Reset styles
+document.documentElement.style.overflow = 'hidden'
 document.body.style.margin = '0px'
 document.body.style.padding = '0px'
 

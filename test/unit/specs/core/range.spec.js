@@ -44,8 +44,9 @@ describe('range.vue', () => {
     })
 
     vm.$nextTick(() => {
-      expect(vm.$el.querySelector('.c-range-content').clientWidth).to.equal(window.innerWidth / 2)
-      expect(vm.$el.querySelector('.c-range-content').style.width).to.equal('50%')
+      const content = vm.$el.querySelector('.c-range-content')
+      expect(content.clientWidth).to.equal(Math.ceil(window.innerWidth / 2))
+      expect(content.style.width).to.equal('50%')
       done()
     })
   })

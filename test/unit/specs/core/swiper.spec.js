@@ -65,7 +65,7 @@ describe('swiper.vue', () => {
       triggerTouchEvents(vm.$el, 'touchend')
 
       setTimeout(() => {
-        expect(vm.$el.style.webkitTransform).to.equal('translate3d(-' + vm.$el.querySelector('.c-swiper-right').clientWidth + 'px, 0, 0)')
+        expect(vm.$el.style.webkitTransform).to.equal('translate3d(-' + vm.$el.querySelector('.c-swiper-right').clientWidth + 'px, 0px, 0px)')
         done()
       }, 250)
     })
@@ -100,7 +100,7 @@ describe('swiper.vue', () => {
       triggerTouchEvents(vm.$el, 'touchend')
 
       setTimeout(() => {
-        expect(vm.$el.style.webkitTransform).to.equal('translate3d(' + vm.$el.querySelector('.c-swiper-left').clientWidth + 'px, 0, 0)')
+        expect(vm.$el.style.webkitTransform).to.equal('translate3d(' + vm.$el.querySelector('.c-swiper-left').clientWidth + 'px, 0px, 0px)')
         done()
       }, 250)
     })

@@ -32,7 +32,7 @@ describe('picker.vue', () => {
 
     vm.$nextTick(() => {
       expect(vm.$el.style.height).to.equal('700px')
-      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 300px, 0)')
+      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 300px, 0px)')
       done()
     })
   })
@@ -57,11 +57,11 @@ describe('picker.vue', () => {
     vm.ok = true
     setTimeout(() => {
       expect(vm.$el.style.height).to.equal('700px')
-      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 300px, 0)')
+      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 300px, 0px)')
       vm.ok = false
       setTimeout(() => {
         expect(vm.$el.style.height).to.equal('0px')
-        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 0px, 0)')
+        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 0px, 0px)')
         done()
       }, 50)
     }, 50)
@@ -86,15 +86,15 @@ describe('picker.vue', () => {
 
     vm.$nextTick(() => {
       expect(vm.$el.style.height).to.equal('300px')
-      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 100px, 0)')
+      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 100px, 0px)')
       vm.size = 5
       vm.$nextTick(() => {
         expect(vm.$el.style.height).to.equal('500px')
-        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 200px, 0)')
+        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 200px, 0px)')
         vm.size = 3
         vm.$nextTick(() => {
           expect(vm.$el.style.height).to.equal('300px')
-          expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 100px, 0)')
+          expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 100px, 0px)')
           done()
         })
       })
@@ -120,14 +120,14 @@ describe('picker.vue', () => {
 
     vm.$nextTick(() => {
       expect(vm.$el.style.height).to.equal('700px')
-      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 200px, 0)')
+      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 200px, 0px)')
       vm.index = 0
       vm.$nextTick(() => {
-        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 300px, 0)')
+        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 300px, 0px)')
         vm.index = 3
         // 3 -> 2
         vm.$nextTick(() => {
-          expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 100px, 0)')
+          expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 100px, 0px)')
           done()
         })
       })
@@ -156,7 +156,7 @@ describe('picker.vue', () => {
 
     vm.$nextTick(() => {
       expect(vm.$el.style.height).to.equal('700px')
-      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 300px, 0)')
+      expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 300px, 0px)')
 
       triggerTouchEvents(vm.$el, 'touchstart', e => {
         e.touches = [{
@@ -172,7 +172,7 @@ describe('picker.vue', () => {
       })
       triggerTouchEvents(vm.$el, 'touchend')
       vm.$nextTick(() => {
-        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0, 200px, 0)')
+        expect(vm.$el.querySelector('.c-picker-content').style.webkitTransform).to.equal('translate3d(0px, 200px, 0px)')
       })
     })
   })
