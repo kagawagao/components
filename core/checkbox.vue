@@ -16,7 +16,7 @@ export default {
   mixins: [mField],
 
   props: {
-    // override
+    // @override
     value: {
       default: false
     },
@@ -47,7 +47,7 @@ export default {
   },
 
   methods: {
-    // override
+    // @override
     onChange (e) {
       e.target.checked = !e.target.checked
       this.$emit('change', e.target.checked ? this._truthy : this._falsy)

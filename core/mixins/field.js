@@ -22,7 +22,7 @@ export default {
   created () {
     if (this.validate && typeof this.$validate === 'function') {
       this.$watch('value', () => {
-        // from 'components/core/plugins/validator
+        // from 'platojs/plugins/validator/index.js
         this.$validate()
       })
     }
