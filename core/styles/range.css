@@ -1,11 +1,11 @@
 .c-range {
   position: relative;
-  padding: dpr(30px);
+  padding: 30px;
 
   &::before {
     content: ' ';
     display: block;
-    height: dpr(4px);
+    height: 4px;
     background-color: var(--placeholder);
   }
 
@@ -20,19 +20,19 @@
 
 .c-range-content {
   position: relative;
-  transform: translate3d(0, -dpr(4px), 0);
-  height: dpr(4px);
+  transform: translate3d(0, -4px, 0);
+  height: 4px;
   background-color: var(--primary);
 
   &::after {
     content: ' ';
     position: absolute;
-    top: -dpr(30px);
-    right: -dpr(30px);
-    width: dpr(60px);
-    height: dpr(60px);
+    top: -30px;
+    right: -30px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1PX 3PX rgba(0, 0, 0, 0.4);
   }
 }

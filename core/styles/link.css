@@ -1,6 +1,6 @@
 .c-link {
   display: inline-block;
-  font-size: dpr(32px);
+  font-size: 32px;
   color: var(--text);
   text-align: center;
 
@@ -9,20 +9,20 @@
   }
 
   &.xlarge {
-    font-size: dpr(48px);
+    font-size: 48px;
     font-weight: bold;
   }
 
   &.large {
-    font-size: dpr(40px);
+    font-size: 40px;
   }
 
   &.small {
-    font-size: dpr(24px);
+    font-size: 24px;
   }
 
   &.xsmall {
-    font-size: dpr(16px);
+    font-size: 16px;
   }
 
   &.primary {

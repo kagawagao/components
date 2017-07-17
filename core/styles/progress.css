@@ -1,6 +1,6 @@
 .c-progress {
   width: 100%;
-  height: dpr(4px);
+  height: 4px;
   background-color: var(--disabled);
   overflow: hidden;
 }

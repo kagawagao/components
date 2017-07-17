@@ -4,10 +4,10 @@
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  width: dpr(80px);
-  height: dpr(48px);
-  border: dpr(2px) solid color(white lightness(80%));
-  border-radius: dpr(24px);
+  width: 80px;
+  height: 48px;
+  border: 2px solid color(white lightness(80%));
+  border-radius: 24px;
   background: color(white lightness(80%));
   position: relative;
 
@@ -15,11 +15,11 @@
   &::after {
     content: ' ';
     background-color: white;
-    border-radius: dpr(24px);
+    border-radius: 24px;
     position: absolute;
     left: 0;
     top: 0;
-    height: dpr(44px);
+    height: 44px;
     transition: transform 0.5s ease;
   }
 
@@ -30,9 +30,9 @@
   /* as a dot */
   &::after {
     vertical-align: top;
-    width: dpr(44px);
+    width: 44px;
     background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1PX 3PX rgba(0, 0, 0, 0.4);
   }
 
   &:checked {
@@ -44,7 +44,7 @@
     }
 
     &::after {
-      transform: translate3d(dpr(32px), 0, 0);
+      transform: translate3d(32px, 0, 0);
     }
   }
 }

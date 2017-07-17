@@ -16,22 +16,22 @@
   width: 72%;
   text-align: center;
   background-color: white;
-  border-radius: dpr(16px);
+  border-radius: 16px;
   transform: translate3d(-50%, -50%, 0);
 }
 
 .c-modal-body {
-  padding: dpr(48px) dpr(32px) dpr(32px);
-  font-size: dpr(40px);
+  padding: 48px 32px 32px;
+  font-size: 40px;
 
   & .title {
-    font-size: dpr(34px);
+    font-size: 34px;
     font-weight: bold;
-    padding-bottom: dpr(24px);
+    padding-bottom: 24px;
   }
 
   & .content {
-    font-size: dpr(28px);
+    font-size: 28px;
   }
 
   &:empty {
@@ -63,17 +63,17 @@
     top: 0;
     width: 0;
     height: 100%;
-    border-left: 1px solid var(--disabled);
+    border-left: 1PX solid var(--disabled);
     display: block;
     z-index: 15;
   }
 
   &:first-child {
-    border-bottom-left-radius: dpr(16px);
+    border-bottom-left-radius: 16px;
   }
 
   &:last-child {
-    border-bottom-right-radius: dpr(16px);
+    border-bottom-right-radius: 16px;
 
     &::after {
       content: none;

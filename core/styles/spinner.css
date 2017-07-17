@@ -7,31 +7,31 @@
     animation: c-spinner-snake 0.8s infinite linear;
     border-color: color(white lightness(80%)) transparent color(white lightness(80%)) color(white lightness(80%));
     border-style: solid;
-    border-width: dpr(4px);
+    border-width: 4px;
     border-radius: 50%;
-    width: dpr(48px);
-    height: dpr(48px);
+    width: 48px;
+    height: 48px;
     display: inline-block;
   }
 
   &.xlarge {
-    width: dpr(80px);
-    height: dpr(80px);
+    width: 80px;
+    height: 80px;
   }
 
   &.large {
-    width: dpr(64px);
-    height: dpr(64px);
+    width: 64px;
+    height: 64px;
   }
 
   &.small {
-    width: dpr(32px);
-    height: dpr(32px);
+    width: 32px;
+    height: 32px;
   }
 
   &.xsmall {
-    width: dpr(24px);
-    height: dpr(24px);
+    width: 24px;
+    height: 24px;
   }
 }
 

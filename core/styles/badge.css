@@ -3,25 +3,25 @@
   vertical-align: middle;
   white-space: nowrap;
   color: white;
-  font-size: dpr(32px);
+  font-size: 32px;
   background-color: var(--disabled);
-  border-radius: dpr(32px);
-  padding: 0 dpr(16px);
+  border-radius: 32px;
+  padding: 0 16px;
 
   &.xlarge {
-    font-size: dpr(40px);
+    font-size: 40px;
   }
 
   &.large {
-    font-size: dpr(36px);
+    font-size: 36px;
   }
 
   &.small {
-    font-size: dpr(28px);
+    font-size: 28px;
   }
 
   &.xsmall {
-    font-size: dpr(24px);
+    font-size: 24px;
   }
 
   &.primary {

@@ -1,9 +1,9 @@
 .c-tab {
   flex: 1;
   line-height: 2;
-  font-size: dpr(28px);
+  font-size: 28px;
   text-align: center;
-  border-bottom: 1px solid var(--disabled);
+  border-bottom: 1PX solid var(--disabled);
 
   &:active {
     color: color(var(--text) blackness(+15%));
@@ -11,7 +11,7 @@
   }
 
   &.checked {
-    border-bottom: dpr(4px) solid var(--primary);
+    border-bottom: 4px solid var(--primary);
   }
 
   &.flex {
@@ -23,16 +23,16 @@
   display: flex;
 
   &.bordered {
-    border: 1px solid var(--primary);
-    border-radius: dpr(16px);
+    border: 1PX solid var(--primary);
+    border-radius: 16px;
     box-sizing: border-box;
 
     & .c-tab {
       box-sizing: border-box;
-      border: 1px solid var(--primary);
+      border: 1PX solid var(--primary);
 
       &:first-child {
-        border-radius: dpr(14px) 0 0 dpr(14px);
+        border-radius: 14px 0 0 14px;
       }
 
       &.checked {
@@ -41,7 +41,7 @@
       }
 
       &:last-child {
-        border-radius: 0 dpr(14px) dpr(14px) 0;
+        border-radius: 0 14px 14px 0;
       }
     }
   }

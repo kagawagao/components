@@ -4,10 +4,10 @@
   padding: 0 1em;
   line-height: 3;
   color: var(--text);
-  font-size: dpr(32px);
+  font-size: 32px;
   background-color: white;
-  border: 1px solid var(--disabled);
-  border-radius: dpr(8px);
+  border: 1PX solid var(--disabled);
+  border-radius: 8px;
 
   &:active {
     color: color(var(--text) blackness(+15%));
@@ -21,20 +21,20 @@
   }
 
   &.xlarge {
-    font-size: dpr(40px);
+    font-size: 40px;
     font-weight: bold;
   }
 
   &.large {
-    font-size: dpr(34px);
+    font-size: 34px;
   }
 
   &.small {
-    font-size: dpr(28px);
+    font-size: 28px;
   }
 
   &.xsmall {
-    font-size: dpr(24px);
+    font-size: 24px;
   }
 
   &.primary {
@@ -50,7 +50,7 @@
     &:disabled {
       color: var(--disabled);
       background-color: white;
-      border: 1px solid var(--disabled);
+      border: 1PX solid var(--disabled);
     }
   }
 
@@ -67,7 +67,7 @@
     &:disabled {
       color: var(--disabled);
       background-color: white;
-      border: 1px solid var(--disabled);
+      border: 1PX solid var(--disabled);
     }
   }
 

@@ -1,10 +1,10 @@
 .c-avatar {
   display: inline-block;
   vertical-align: middle;
-  width: dpr(100px);
-  height: dpr(100px);
-  font-size: dpr(50px);
-  line-height: dpr(100px);
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  line-height: 100px;
   text-align: center;
   background-color: var(--placeholder);
   overflow: hidden;
@@ -17,17 +17,17 @@
   }
 
   &.large {
-    width: dpr(210px);
-    height: dpr(210px);
-    font-size: dpr(105px);
-    line-height: dpr(210px);
+    width: 210px;
+    height: 210px;
+    font-size: 105px;
+    line-height: 210px;
   }
 
   &.small {
-    width: dpr(80px);
-    height: dpr(80px);
-    font-size: dpr(40px);
-    line-height: dpr(80px);
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    line-height: 80px;
   }
 
   &.circle {
@@ -40,7 +40,7 @@
   }
 
   &.bordered {
-    border: dpr(4px) solid white;
-    box-shadow: 0 0 dpr(4px) rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   }
 }

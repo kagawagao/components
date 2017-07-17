@@ -1,5 +1,5 @@
 .c-row {
-  font-size: dpr(32px);
+  font-size: 32px;
   position: relative;
   overflow: hidden; /* preventing horizontal scrollbar */
 
@@ -28,16 +28,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid var(--disabled);
+    border-bottom: 1PX solid var(--disabled);
   }
 
   &::after {
     content: ' ';
     position: absolute;
-    left: dpr(20px);
+    left: 20px;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid var(--disabled);
+    border-top: 1PX solid var(--disabled);
   }
 
   & ~ .c-row {
@@ -55,8 +55,8 @@
 
 .c-row-link {
   color: var(--disabled);
-  margin-left: dpr(10px);
-  margin-right: dpr(20px);
+  margin-left: 10px;
+  margin-right: 20px;
   align-self: center;
   transform: rotate3d(0, 0, 1, 90deg);
 }

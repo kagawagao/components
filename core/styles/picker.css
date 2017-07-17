@@ -15,8 +15,8 @@
 
 .c-picker-highlight {
   margin-top: -1px;
-  border-top: 1px solid var(--disabled);
-  border-bottom: 1px solid var(--disabled);
+  border-top: 1PX solid var(--disabled);
+  border-bottom: 1PX solid var(--disabled);
 }
 
 .c-picker-content {

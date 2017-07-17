@@ -34,16 +34,16 @@
 .c-slider-indicators {
   position: absolute;
   width: 100%;
-  bottom: dpr(20px);
+  bottom: 20px;
   text-align: center;
   overflow: hidden;
 }
 
 .c-slider-indicator {
   display: inline-block;
-  margin: dpr(8px);
-  width: dpr(16px);
-  height: dpr(16px);
+  margin: 8px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: color(white alpha(0.5));
 
